@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: LosCedros
+        psr4_prefix: LosCedros
+        src_path: app
