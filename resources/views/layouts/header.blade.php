@@ -1,8 +1,8 @@
-<!-- Main Header -->
+    <!-- Main Header -->
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo"><b>Admin</b>LTE</a>
+    <a href="index.html" class="logo">  {!! Html::image('storage/logohead.png','alt="Logo"' ) !!} </a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -30,8 +30,8 @@
                                         <div class="pull-left">
                                             <!-- User Image -->
 
-                                            {!! Html::image('storage/1446610309-fotogaboopenpsycho.jpg','class="img-circle" alt="User Image"' ) !!}
-                                        </div>
+                                                {!! Html::image('storage/1446610309-fotogaboopenpsycho.jpg','class="img-circle" alt="User Image"' ) !!}
+                                            </div>
                                         <!-- Message title and timestamp -->
                                         <h4>
                                             Support Team

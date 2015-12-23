@@ -17,7 +17,7 @@ class CreateTableEmployees extends Migration
             $table->increments('id'); //legajo
             $table->string('nombre');
             $table->string('photo');
-            $table->integer('cuil');
+            $table->string('cuil');
             $table->date('fecha_ingreso');
             $table->integer('categoria'); //Especialidad
             $table->integer('subcategoria');
@@ -46,6 +46,7 @@ class CreateTableEmployees extends Migration
             $table->integer('cant_a_cargo');
             $table->string('tipo_contrato');
             $table->string('turno');
+            $table->string('es_jerarquico');
             $table->string('jubilacion');
             $table->string('afjp')->nullable();
             $table->decimal('basico', 17, 4);

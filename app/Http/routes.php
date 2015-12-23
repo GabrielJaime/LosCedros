@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return view('auth/login');
+    return view('auth/login');
 })->middleware('guest');
 
 // Task Routes
@@ -30,7 +30,7 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('admin', function () {
-	return view('admin_template');
+    return view('layouts/admin_template');
 });
 
 
@@ -40,12 +40,11 @@ Route::get('admin', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'api', 'namespace' => 'API'], function ()
-{
-	Route::group(['prefix' => 'v1'], function ()
-	{
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
+    Route::group(['prefix' => 'v1'], function () {
         require Config::get('generator.path_api_routes');
-	});
+
+    });
 });
 
 
@@ -62,4 +61,12 @@ Route::resource('ubicaciones', 'UbicacionesController');
 Route::get('ubicaciones/{id}/delete', [
     'as' => 'ubicaciones.delete',
     'uses' => 'UbicacionesController@destroy',
+]);
+
+
+Route::resource('empleados', 'empleadosController');
+
+Route::get('empleados/{id}/delete', [
+    'as' => 'empleados.delete',
+    'uses' => 'empleadosController@destroy',
 ]);

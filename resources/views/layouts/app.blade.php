@@ -9,6 +9,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<title>{{ $page_title or "LosCedros WEB" }}</title>
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 	<!-- Bootstrap 3.3.2 -->
+	<link rel="apple-touch-icon" href="/storage/favicon.png">
+
 
 	{!! Html::style('assets/bootstrap/css/bootstrap.min.css') !!}
 
@@ -16,6 +18,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!-- Ionicons -->
 	<link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- DataTables -->
+	{!! Html::style('assets/DataTables/datatables.min.css') !!}
+
 	<!-- Theme style -->
 	{!! Html::style('assets/dist/css/AdminLTE.min.css') !!}
 
@@ -49,13 +55,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<h1>
-				{{ $page_title or "Page Title" }}
-				<small>{{ $page_description or "Page Descriotion"  }}</small>
+				@yield('page_title')
+				<small>@yield('page_description')</small>
 			</h1>
-			<ol class="breadcrumb">
-				<li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-				<li class="active">Here</li>
-			</ol>
+
 		</section>
 
 		<!-- Main content -->
@@ -74,15 +77,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED JS SCRIPTS -->
 
-<!-- jQuery 2.1.3 -->
+<!-- jQuery 2.1.4 -->
 {!! Html::script('assets/plugins/jQuery/jQuery-2.1.4.min.js') !!}
-<!-- Bootstrap 3.3.2 JS -->
+<!-- Bootstrap 3.3.5 JS -->
 {!! Html::script('assets/bootstrap/js/bootstrap.min.js') !!}
+
+
+<!-- SlimScroll -->
+{!! Html::script('assets/plugins/slimScroll/jquery.slimscroll.min.js') !!}
+<!-- FastClick -->
+{!! Html::script('assets/plugins/fastclick/fastclick.js') !!}
+
 <!-- AdminLTE App -->
 {!! Html::script('assets/dist/js/app.min.js') !!}
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
+@yield('script')
 </body>
 </html>
