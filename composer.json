@@ -16,8 +16,9 @@
         "laravelcollective/html": "5.1.*",
         "laracasts/flash": "dev-master",
         "bosnadev/repositories": "dev-master",
-        "mitulgolakiya/laravel-api-generator": "dev-master",
-        "doctrine/dbal": "^2.5"
+        "gabrieljaime/laravel-api-generator-gj": "dev-master",
+        "doctrine/dbal": "^2.5",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

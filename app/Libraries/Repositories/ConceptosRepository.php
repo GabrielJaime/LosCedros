@@ -9,7 +9,7 @@ class ConceptosRepository extends Repository
 {
 
     /**
-    * Configure the Modeli
+    * Configure the Model
     *
     **/
     public function model()
@@ -40,9 +40,9 @@ class ConceptosRepository extends Repository
         return [$query->get(), $attributes];
     }
 
-    public function apiFindOrFail($codigo)
+    public function apiFindOrFail($id)
     {
-        $model = $this->find($codigo);
+        $model = $this->find($id);
 
         if(empty($model))
         {
@@ -52,9 +52,9 @@ class ConceptosRepository extends Repository
         return $model;
     }
 
-    public function apiDeleteOrFail($codigo)
+    public function apiDeleteOrFail($id)
     {
-        $model = $this->find($codigo);
+        $model = $this->find($id);
 
         if(empty($model))
         {

@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        'Intervention\Image\ImageServiceProvider',
 
         /*
          * Application Service Providers...
@@ -204,6 +205,7 @@ return [
         'Form'      => 'Collective\Html\FormFacade',
         'Html'      => 'Collective\Html\HtmlFacade',
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Image'     => 'Intervention\Image\Facades\Image',
 
     ],
 

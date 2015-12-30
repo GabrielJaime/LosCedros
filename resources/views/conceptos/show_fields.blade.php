@@ -1,7 +1,13 @@
+<!-- Id Field -->
+<div class="form-group">
+    {!! Form::label('id', 'Id:') !!}
+    <p>{!! $conceptos->id !!}</p>
+</div>
+
 <!-- Codigo Field -->
 <div class="form-group">
-    {!! Form::label('id', 'Codigo:') !!}
-    <p>{!! $conceptos->id !!}</p>
+    {!! Form::label('codigo', 'Codigo:') !!}
+    <p>{!! $conceptos->codigo !!}</p>
 </div>
 
 <!-- Detalle Field -->
@@ -100,10 +106,10 @@
     <p>{!! $conceptos->quefor !!}</p>
 </div>
 
-<!-- 1Ero Field -->
+<!-- Ero1 Field -->
 <div class="form-group">
-    {!! Form::label('1ero', '1Ero:') !!}
-    <p>{!! $conceptos->1ero !!}</p>
+    {!! Form::label('ero1', 'Ero1:') !!}
+    <p>{!! $conceptos->ero1 !!}</p>
 </div>
 
 <!-- Manual Field -->
@@ -116,5 +122,17 @@
 <div class="form-group">
     {!! Form::label('HBLF', 'Hblf:') !!}
     <p>{!! $conceptos->HBLF !!}</p>
+</div>
+
+<!-- Created At Field -->
+<div class="form-group">
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{!! $conceptos->created_at !!}</p>
+</div>
+
+<!-- Updated At Field -->
+<div class="form-group">
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{!! $conceptos->updated_at !!}</p>
 </div>
 

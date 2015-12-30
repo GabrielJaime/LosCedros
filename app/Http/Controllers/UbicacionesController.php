@@ -16,8 +16,6 @@ class UbicacionesController extends AppBaseController
 
 	function __construct(UbicacionesRepository $ubicacionesRepo)
 	{
-		$this->middleware('auth');
-
 		$this->ubicacionesRepository = $ubicacionesRepo;
 	}
 

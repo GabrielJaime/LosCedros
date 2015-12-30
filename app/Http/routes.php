@@ -48,11 +48,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
 });
 
 
-Route::resource('conceptos', 'ConceptosController');
+Route::resource('empleados', 'empleadosController');
 
-Route::get('conceptos/{id}/delete', [
-    'as' => 'conceptos.delete',
-    'uses' => 'ConceptosController@destroy',
+Route::get('empleados/{id}/delete', [
+    'as' => 'empleados.delete',
+    'uses' => 'empleadosController@destroy',
 ]);
 
 
@@ -64,9 +64,9 @@ Route::get('ubicaciones/{id}/delete', [
 ]);
 
 
-Route::resource('empleados', 'empleadosController');
+Route::resource('conceptos', 'ConceptosController');
 
-Route::get('empleados/{id}/delete', [
-    'as' => 'empleados.delete',
-    'uses' => 'empleadosController@destroy',
+Route::get('conceptos/{id}/delete', [
+    'as' => 'conceptos.delete',
+    'uses' => 'ConceptosController@destroy',
 ]);

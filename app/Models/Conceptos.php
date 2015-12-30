@@ -10,6 +10,7 @@ class Conceptos extends Model
 
 	public $fillable = [
 	    "id",
+		"codigo",
 		"detalle",
 		"retencion",
 		"familia",
@@ -26,9 +27,11 @@ class Conceptos extends Model
 		"con_carga",
 		"es_formula",
 		"quefor",
-		"1ero",
+		"ero1",
 		"manual",
-		"HBLF"
+		"HBLF",
+		"created_at",
+		"updated_at"
 	];
 
     /**
@@ -37,7 +40,9 @@ class Conceptos extends Model
      * @var array
      */
     protected $casts = [
-        "detalle" => "string",
+        "id" => "integer",
+		"codigo" => "integer",
+		"detalle" => "string",
 		"retencion" => "string",
 		"familia" => "string",
 		"haberdebe" => "string",
@@ -51,28 +56,13 @@ class Conceptos extends Model
 		"con_carga" => "string",
 		"es_formula" => "string",
 		"quefor" => "string",
+		"ero1" => "integer",
 		"manual" => "string",
 		"HBLF" => "string"
     ];
 
 	public static $rules = [
-	    "id" => "required",
-		"detalle" => "required",
-		"retencion" => "required",
-		"familia" => "required",
-		"haberdebe" => "required",
-		"sumaresta" => "required",
-		"for" => "required",
-		"por_sobre" => "required",
-		"esfijo" => "required",
-		"imp_por" => "required",
-		"retencion1" => "required",
-		"basico" => "required",
-		"con_carga" => "required",
-		"es_formula" => "required",
-		"1ero" => "required",
-		"manual" => "required",
-		"HBLF" => "required"
+	    
 	];
 
 }

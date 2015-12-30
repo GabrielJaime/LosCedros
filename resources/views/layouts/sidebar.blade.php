@@ -42,6 +42,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{!! route('conceptos.index') !!}">Carga de Conceptos</a></li>
                     <li><a href="{!! route('empleados.index') !!}">Carga de Empleados</a></li>
+                    <li><a href="{!! route('ubicaciones.index') !!}">Carga de Ubicaciones</a></li>
                     <li><a href="#">Link in level 2</a></li>
                 </ul>
             </li>

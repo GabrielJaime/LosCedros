@@ -5,10 +5,11 @@ use Illuminate\Database\Eloquent\Model as Model;
 class Ubicaciones extends Model
 {
     
-	public $table = "ubicaciones";
+	public $table = "Ubicaciones";
     
 
 	public $fillable = [
+	    "id",
 		"descripcion",
 		"created_at",
 		"updated_at"
